@@ -59,7 +59,7 @@ class _AnalyticsHomePageState extends State<AnalyticsHomePage> {
   void initState() {
     super.initState();
     db = _fetchStats();
-    Timer.periodic(new Duration(seconds: 15), (timer) {
+    Timer.periodic(new Duration(seconds: 300), (timer) {
       var now = new DateTime.now();
       print('[INFO] ${now}'); 
       setState(() {
