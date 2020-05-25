@@ -116,7 +116,7 @@ class _AnalyticsHomePageState extends State<AnalyticsHomePage> {
       width: 1060.0,
       height: 700.0,
       child: EasyWebView(
-        src: 'http://127.0.0.1:9000/api/v2/web/sankey-chart.html',
+        src: 'http://127.0.0.1:9000/api/v2/web/sankey-new.html',
         isHtml: false,
         isMarkdown: false,
         convertToWidets: false,
@@ -157,7 +157,16 @@ class _AnalyticsHomePageState extends State<AnalyticsHomePage> {
                 } else if (snapshot.hasError) {
                   return Text("${snapshot.error}");
                 } 
-                return CircularProgressIndicator();
+                return Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children : <Widget>[
+                    SizedBox(
+                      height: 50.0,
+                      width: 50.0,
+                      child: CircularProgressIndicator(),
+                    )
+                  ],
+                );
               },
             ),
             Row(
